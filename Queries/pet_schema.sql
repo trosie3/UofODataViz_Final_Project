@@ -14,7 +14,7 @@ CREATE TABLE color_labels (
 	UNIQUE (color_name)
 	);
 	
-CREATE TABLE test (
+CREATE TABLE pet_mockup (
 	type INT,
 	age VARCHAR(3) NOT NULL,
 	breed_id1 VARCHAR(3) NOT NULL,
