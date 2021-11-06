@@ -10,6 +10,17 @@ Slack group: group_project_team_1
 
 #### Keep in mind for machine learning model & analysis
 Which model did you choose and why?
+Since we are looking at the what affects the speed of the adoption and there are 4 types of speed (classification) therefore we are using random forest model.
+We will also look at the individual variables vs the speed of the adoption using regression model and make graphs.
+
+
 How are you training your model?
+- we obtained dataset from kaggle.
+- Remove null values.
+- Remove the columns that are irrevelent for our project.
+- Train-test split
+
+- considering to Apply NLP to description field.
 What is the model's accuracy?
+
 How does this model work?
