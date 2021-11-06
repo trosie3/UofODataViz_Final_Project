@@ -6,7 +6,7 @@ Pandas will be used to clean the data and perform an exploratory analysis. Furth
 Postgres(cloud) is the database we intend to use. 
 
 ## Machine Learning
-TBD
+A random forest classifier is what we are intending to use.
 
 ## Dashboard
-TBD
+We intend to use Tableau to create a presentable dashboard.
