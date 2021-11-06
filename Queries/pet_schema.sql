@@ -2,7 +2,7 @@
 CREATE TABLE breed_labels (
 	breed_id VARCHAR(3) NOT NULL,
 	type INT,
-	breed_name VARCHAR(40) NOT NULL,
+	breed_name VARCHAR(47) NOT NULL,
 	PRIMARY KEY (breed_id),
 	UNIQUE (breed_name)
 	);
