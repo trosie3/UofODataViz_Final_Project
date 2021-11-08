@@ -23,7 +23,7 @@ We obtained dataset from kaggle's petfinder competition.
 - Apply NLP to description field.
 
 ### What is the model's accuracy?
-The model's accuracy score is only 33% which is low therefore we will apply other machine learning models such as neural network, Adaboost or aome other model for the real data.
+The model's accuracy score is only 33% which is low but this was using the mockup data - will access again with real data, if accuracy too low will consider other models/methods. 
 
 ### How does this model work?
 We chose The random forest model because: 
