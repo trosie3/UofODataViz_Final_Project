@@ -12,9 +12,10 @@ Slack group: group_project_team_1
 Which model did you choose and why?
 Since we are looking at the what affects the speed of the adoption and there are 4 types of speed (classification) therefore we are using random forest classifier model.
 
-
+### Data source:
+We obtained dataset from kaggle.
 ### How are you training your model?
-- we obtained dataset from kaggle.
+
 - Remove null values.
 - Remove the columns that are irrevelent for our project.
 - Train-test split
