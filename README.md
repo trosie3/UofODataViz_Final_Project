@@ -13,7 +13,8 @@ Which model did you choose and why?
 Since we are looking at the what affects the speed of the adoption and there are 4 types of speed (classification) therefore we are using random forest classifier model.
 
 ### Data source:
-We obtained dataset from kaggle.
+We obtained dataset from kaggle's petfinder competition.
+
 ### How are you training your model?
 
 - Remove null values.
