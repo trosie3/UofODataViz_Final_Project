@@ -30,6 +30,7 @@ CREATE TABLE pet_mockup (
 	sterilized INT,
 	health INT,
 	fee VARCHAR(4),
+	adoption_speed INT, 
 FOREIGN KEY (breed_id1) REFERENCES breed_labels (breed_id),
 FOREIGN KEY (breed_id2)	REFERENCES breed_labels (breed_id),
 FOREIGN KEY (color_id1) REFERENCES color_labels (color_id),
