@@ -1,3 +1,5 @@
+-- Creating tables for PF_PetDB
+
 CREATE TABLE cleaned_train(
 	Type INT,
 	Age INT,
@@ -20,4 +22,18 @@ CREATE TABLE cleaned_train(
 	word_count INT,
 	Fee_bins INT
 	
+	);
+
+	Creating tables for PF_PetDB
+CREATE TABLE breed_labels (
+	breedid INT,
+	type INT,
+	breedname VARCHAR NOT NULL,
+	UNIQUE (breedname)
+	);
+
+CREATE TABLE color_labels (
+	colorid INT,
+	colorname VARCHAR NOT NULL,
+	UNIQUE (colorname)
 	);
