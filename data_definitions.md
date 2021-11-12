@@ -45,6 +45,8 @@ PhotoAmt - Total uploaded photos(pics) for a profile
 
 word_count - Number of words in the Description column of a profile. Descrption column dropped and replaced with this data because that data was a string and we wanted a numeric value to proform analysis on.
 
+word_count_optimized - Number of words in the Description column of a profile with stop words removed. 2nd try at Descrption column to see if would make model more affective. Dropped raw Description and replaced with this data because that data was a string and we wanted a numeric value to proform analysis on, and wanted to see if stop words played a role int eh model.
+
 ### unchanged columns definitions:
 - Type - Type of animal (1 = Dog, 2 = Cat)
 - Age - Age of pet when listed, in months

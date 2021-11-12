@@ -1,4 +1,4 @@
--- Creating tables for PF_PetDB
+-- Creating tables for could database
 -- right now train table code might have issue cant get csv to upload after creating table so commenting out
 -- CREATE TABLE train(
 	--Type INT,
