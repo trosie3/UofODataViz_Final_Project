@@ -1,6 +1,6 @@
 -- Creating tables for could database
 -- right now train table code might have issue cant get csv to upload after creating table so commenting out
--- CREATE TABLE train(
+-- CREATE TABLE raw_train(
 	--Type INT,
 	--Name VARCHAR,
 	--Age INT,
@@ -23,7 +23,7 @@
 	--VideoAmt INT,
 	--Description VARCHAR,
 	--PetID VARCHAR,
-	--PhotoAmt DECIMAL
+	--PhotoAmt DECIMAL,
 	--AdoptionSpeed INT
 	--);
 
