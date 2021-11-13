@@ -1,4 +1,4 @@
--- Creating tables for database
+-- Creating tables for could database
 
 CREATE TABLE cleaned_train(
 	Type INT,
