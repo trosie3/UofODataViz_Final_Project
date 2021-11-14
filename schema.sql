@@ -88,7 +88,7 @@ CREATE TABLE dogs_only(
 	fee_bins INT
 	);
 
-CREATE TABLE (rf_model_data
+CREATE TABLE rf_model_data (
 	index INT,
 	Model_Num INT,
 	Accuracy_Score(%) Float,
@@ -96,7 +96,7 @@ CREATE TABLE (rf_model_data
 	Features_Used VARCHAR,
 	Model_Ranking INT
 	);
-CREATE TABLE (rf_predictions_75train25test
+CREATE TABLE rf_predictions_75train25test(
 	index INT,
 	Actual INT,
 	Model_1 INT,
@@ -108,7 +108,7 @@ CREATE TABLE (rf_predictions_75train25test
 	Model_7 INT,
 	Model_8 INT
 	);
-CREATE TABLE (rf_predictions_80train20test
+CREATE TABLE rf_predictions_80train20test(
 	index INT,
 	Actual INT,
 	Model_1 INT,
