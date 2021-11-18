@@ -115,3 +115,7 @@ CREATE TABLE rf_predictions_80train20test(
 	Model_9 INT,
 	Model_10 INT
 	);
+CREATE TABLE final_models_feature_importance (
+	Feature Names TEXT
+	Importances double precision
+	);
