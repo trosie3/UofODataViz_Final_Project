@@ -16,6 +16,8 @@ We obtained dataset from kaggle's petfinder competition. https://www.kaggle.com/
 The questions we are seeking to answer is "what is the adoption?" Through processing, cleaning, and analysing the data, we hope to find
 the answer and what qualities play into adoption speed
 
+https://public.tableau.com/app/profile/spring7540/viz/AdoptionSpeedbyWordCountDashboard/Story1?publish=yes 
+
 #### Keep in mind for machine learning model & analysis
 Which model did you choose and why?
 Since we are looking at the what affects the speed of the adoption and there are 4 types of speed (classification) therefore we are using random forest classifier model.
