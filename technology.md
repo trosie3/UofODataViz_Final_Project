@@ -10,5 +10,5 @@ A random forest classifier is what we are intending to use.
 
 ## Dashboard
 We have been using Tableau to create a comprehensive and comprehendable presentation. We are integrating our slides from our Google Slides 
-presentation into our dashboard to create a better story. W eare also creatively using filters within Tableau to make our presented information 
-interactive, that way our audience can quickly have answers to questiond we may not be immidiately answering with our story
+presentation into our dashboard to create a better story. We are also creatively using filters within Tableau to make our presented information 
+interactive, that way our audience can quickly have answers to questions we may not be immidiately answering with our story.
