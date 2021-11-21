@@ -29,11 +29,16 @@ Data definition file (link)
 Cleaned data from clean_trained: 14981 rows, 20 columns (dropped 12 rows with missing data, and ID columns)
 
 ### Assumptions made on which features would have an impact
-- A common saying is 'dogs are man’s best friend' so we suspect that type of pet (dog or cat) to have an impact
-- Health of the pet might will have a significant impact, most people would probably adopt healthy over injured.
-- Age of the pet to have a large impact. Everyone loves kittens and puppies, and older pets may be 'less adoptable.'
-- The number of photos of the pet(s) will a have an impact, if looking online you are probably looking for pictures and then scrolling through them as part of the decision process.
-- A common thought is that black pets are less adoptable, so 'color1' might have more an impact
+- A common saying is 'dogs are man’s best friend' so we suspect that type of pet (dog or cat) to have an impact (image of graph we made)
+  - any piliminary coorilation from graph??? 
+- Health of the pet might will have a significant impact, most people would probably adopt healthy over injured. (image of graph we made)
+  - any piliminary coorilation from graph??? 
+- Age of the pet to have a large impact. Everyone loves kittens and puppies, and older pets may be 'less adoptable.' (image of graph we made)
+  - any piliminary coorilation from graph??? 
+- The number of photos of the pet(s) will a have an impact, if looking online you are probably looking for pictures and then scrolling through them as part of the decision process. (image of graph we made)
+  - any piliminary coorilation from graph??? 
+- A common thought is that black pets are less adoptable, so 'color1' might have more an impact (image of graph we made)
+  - any piliminary coorilation from graph??? 
 - The description will likely be at least somewhat important perhaps towards the top, not everyone reads descriptions but many do. 
 
 ## Model Results
@@ -43,68 +48,72 @@ We ran 10 different RandomForestClassifer model iterations.
 
 - Model 1
   - Features used: all
-  - Classification Report:
+  - Classification Report: (image)
   - Accuracy Score: 41.35
-  - Feature importance:
+  - Feature importance: (image)
 - Model 2
   - Features used: all but type, videoamt, health
-  - Classification Report:
+  - Classification Report: (image)
   - Accuracy Score: 41.59
 - Model 3
   - Features used: only these: word_count, photoamt, age, color2, bread1, color1, breed2
-  - Classification Report:
+  - Classification Report: (image)
   - Accuracy Score: 36.28
 - Model 4
   - Features used: all but type, videoamt, health, vaccinanted, sterilized
-  - Classification Report:
+  - Classification Report: (image)
   - Accuracy Score: 41.19
   - Feature importance:
 - Model 5
   - Features used: all with transformed word_count into wordbins
-  - Classification Report:
+  - Classification Report: (image)
   - Accuracy Score: 41.14
   - Feature importance:
 - Model 6 (a check to ensure word_count wasn't pulling the model accuracy down even though 'top feature')
   - Features used: all but type, videoamt, health, word_count/wordbins
-  - Classification Report:
+  - Classification Report: (image)
   - Accuracy Score: 39.86
 
 75/25 split, cleaned_train_optimized.csv used (see if removed stop words helps improve model)
 
 - Model 7
   - Features used: all with optimzed_word_count (stop words removed) 
-  - Classification Report:
+  - Classification Report: (image)
   - Accuracy Score: 40.44
-  - Feature importance:
+  - Feature importance: (image)
 - Model 8
   - Features used: all with optimzed_word_count (stop words removed) but type, videoamt, health
-  - Classification Report:
+  - Classification Report: (image)
   - Accuracy Score: 40.79
 
 80/20 split, cleaned_train.csv used (back to first csv because 1 and 2 best models so far)
 
 - Model 9 
   - Features used: all
-  - Classification Report:
+  - Classification Report: (image)
   - Accuracy Score: 42.24
-  - Feature importance:
+  - Feature importance: (image)
 - Model 10
   - Features used: all but type, videoamt, health
-  - Classification Report:
+  - Classification Report: (image)
   - Accuracy Score: 42.54
 
 ## Summary & Findings
-Model 10, 9, 2, and 1 were out best models. Models 10 and 2 dropped the 3 features show in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created.
+Model 10, 9, 2, and 1 were out best models. Models 10 and 2 dropped the 3 features show in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. (image of graph we made of model 9 and 10?)
 
 Top Three Features from best model:
-Word_count (decripton column transformation), Age, and PhotoAmt (transformed into the bins we created). Even though Age and PhotoAmt switched places these three features remained key in each model iteration regardless of split or csv pulled in.
+Word_count (decripton column transformation), Age, and PhotoAmt (transformed into the bins we created). Even though Age and PhotoAmt switched places these three features remained key in each model iteration regardless of split or csv pulled in. 
 
 Bottom three & least important features:
-Type, Health and VideoAmt. We can safety say least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely and their scores improved compared to the models that used all features.
+Type, Health and VideoAmt. We can safety say least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely and their scores improved compared to the models that used all features. (image of final feature impotance graph)
 
-Finding based on our assumptions, what we got right, wrong, and what we missed:
+Finding based on our assumptions: what we got right, wrong, and what we missed:
+Wrong : Type and Health, they were actually 2 of the least important features. Also, single color wasn't as important as we suspected it might be. Type was acutlly really suprising to all of us, we really thought dog vs cat might matter more.
+Right : word_count (thus decription) although more important than we originally expected, age and photoamt. All of these turned out to be the top features regardless of model iteration.
+Missed : Color2 more important than we would have guessed (in top 5 features), which kind of make sense and most animals probably are dual-colored. Fee was also lower than we would have thought though we didnt expect it to be a top feature. 
+Unsurprsed by: Most of the bottom half features.
 
-### Limitations & Recommendations 
+### Limitations & Recommendations to improve
 Time 
  - Given our 4 week project deadline, what we could perform and analyze was limited. If we had more time we could have:
    - Tried other types of models and compared them. 
