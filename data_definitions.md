@@ -1,4 +1,4 @@
-# Definitions of Columns
+# Definitions of Columns in Dataset
 
 ## Target data
 AdoptionSpeed - value we are trying to predict
@@ -11,7 +11,7 @@ Categorical speed of adoption. Lower is faster.
 
 ## Feature data
 ### Transformed data defintions
-Fee_bins - Adoption fee (Fee column dropped and replaced with this data)
+Fee_bins - Adoption fee (Original fee column dropped and replaced with this data)
 - 0 - free
 - 1 - fee 1-50
 - 2 - fee 51-100
@@ -19,7 +19,7 @@ Fee_bins - Adoption fee (Fee column dropped and replaced with this data)
 - 4 - fee 151-200
 - 5 - fee 201+
 
-Quantity - Number of pets represented in a profie
+Quantity - Number of pets represented in a profie (original values replaced with these data bins)
 - 1 - 1 pet
 - 2 - 2 pets
 - 3 - 3 pets
@@ -27,7 +27,7 @@ Quantity - Number of pets represented in a profie
 - 5 - 5 pets
 - 6 - 6 or more
 
-PhotoAmt - Total uploaded photos(pics) for a profile
+PhotoAmt - Total uploaded photos(pics) for a profile (original values replaced with these data bins)
 - 0 - no pics
 - 1 - 1 pic
 - 2 - 2 pics
@@ -64,7 +64,7 @@ word_count_optimized - Number of words in the Description column of a profile wi
 - Health - Health Condition (1 = Healthy, 2 = Minor Injury, 3 = Serious Injury, 0 = Not Specified)
 - VideoAmt - Total uploaded videos for this pet
 
-## Dropped columns - didn't transform or use all are identification columns
+## Dropped columns - didn't transform or use in model, all these columns are identification columns
 - PetID - Unique hash ID of pet profile
 - Name - Name of pet (Empty if not named)
 - State - State location in Malaysia (Refer to StateLabels dictionary)
