@@ -40,52 +40,52 @@ Cleaned data from clean_trained: 14981 rows, 20 columns (dropped 12 rows with mi
 We ran 10 different RandomForestClassifer model iterations.
 75/25 split, cleaned_train.csv used
 - Model 1
- - Features used: all
- - Classification Report:
- - Accuracy Score: 41.35
- - Feature importance:
+  - Features used: all
+  - Classification Report:
+  - Accuracy Score: 41.35
+  - Feature importance:
 - Model 2
- - Features used: all but type, videoamt, health
- - Classification Report:
- - Accuracy Score: 41.59
+  - Features used: all but type, videoamt, health
+  - Classification Report:
+  - Accuracy Score: 41.59
 - Model 3
- - Features used: only these: word_count, photoamt, age, color2, bread1, color1, breed2
- - Classification Report:
- - Accuracy Score: 36.28
+  - Features used: only these: word_count, photoamt, age, color2, bread1, color1, breed2
+  - Classification Report:
+  - Accuracy Score: 36.28
 - Model 4
- - Features used: all but type, videoamt, health, vaccinanted, sterilized
- - Classification Report:
- - Accuracy Score: 41.19
- - Feature importance:
+  - Features used: all but type, videoamt, health, vaccinanted, sterilized
+  - Classification Report:
+  - Accuracy Score: 41.19
+  - Feature importance:
 - Model 5
- - Features used: all with transformed word_count into wordbins
- - Classification Report:
- - Accuracy Score: 41.14
- - Feature importance:
+  - Features used: all with transformed word_count into wordbins
+  - Classification Report:
+  - Accuracy Score: 41.14
+  - Feature importance:
 - Model 6 (a check to ensure word_count wasn't pulling the model accuracy down even though 'top feature')
- - Features used: all but type, videoamt, health, word_count/wordbins
- - Classification Report:
- - Accuracy Score: 39.86
+  - Features used: all but type, videoamt, health, word_count/wordbins
+  - Classification Report:
+  - Accuracy Score: 39.86
 75/25 split, cleaned_train_optimized.csv used (see if removed stop words helps improve model)
 - Model 7
- - Features used: all with optimzed_word_count (stop words removed) 
- - Classification Report:
- - Accuracy Score: 40.44
- - Feature importance:
+  - Features used: all with optimzed_word_count (stop words removed) 
+  - Classification Report:
+  - Accuracy Score: 40.44
+  - Feature importance:
 - Model 8
- - Features used: all with optimzed_word_count (stop words removed) but type, videoamt, health
- - Classification Report:
- - Accuracy Score: 40.79
+  - Features used: all with optimzed_word_count (stop words removed) but type, videoamt, health
+  - Classification Report:
+  - Accuracy Score: 40.79
 80/20 split, cleaned_train.csv used (back to first csv because 1 and 2 best models so far)
 - Model 9 
- - Features used: all
- - Classification Report:
- - Accuracy Score: 42.24
- - Feature importance:
+  - Features used: all
+  - Classification Report:
+  - Accuracy Score: 42.24
+  - Feature importance:
 - Model 10
- - Features used: all but type, videoamt, health
- - Classification Report:
- - Accuracy Score: 42.54
+  - Features used: all but type, videoamt, health
+  - Classification Report:
+  - Accuracy Score: 42.54
 
 ## Summary & Findings
 Model 10, 9, 2, and 1 were out best models. Models 10 and 2 dropped the 3 features show in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created.
@@ -101,11 +101,11 @@ Finding based on our assumptions, what we got right, wrong, and what we missed:
 ### Limitations & Recommendations 
 Time 
  - Given our 4 week project deadline, what we could perform and analyze was limited. If we had more time we could have:
-  - Tried other types of models and compared them. 
-  - Found a better way bin word_count to make it work for the model, than the initial way we attempted.
-  - After removing stop words in the optimization run through, we could have attempted a bin to see if that made a difference as logic suggestions removing the stop words should have improved the model but it didn't.
-  - Better yet we could have performed full NLP on the description column instead of only looking at word count. By being able to look at the sentiment of a description and rank those descriptions, may have increased the accuracy of the model as well as helped PetFinder by allowing us to make a better recommendation than just a possible description length/limit.
+   - Tried other types of models and compared them. 
+   - Found a better way bin word_count to make it work for the model, than the initial way we attempted.
+   - After removing stop words in the optimization run through, we could have attempted a bin to see if that made a difference as logic suggestions removing the stop words should have improved the model but it didn't.
+   - Better yet we could have performed full NLP on the description column instead of only looking at word count. By being able to look at the sentiment of a description and rank those descriptions, may have increased the accuracy of the model as well as helped PetFinder by allowing us to make a better recommendation than just a possible description length/limit.
  
 Data
- - Limited amount of data point in Adoption Speed 0, which is also where even our best models struggled predicting the most. Perhaps if there had been a more evenly distributed amount of data points in each Adoption Speed Bin the model could have been trained better.
- - Adoption Speed already binned prior to our accessing the data. Given that adoption speed is based on a time-line, had this not previously be categorized we could have performed a LinearRegression Model which has better accuracy than a RandomForest and performs better at predicting time.
+  - Limited amount of data point in Adoption Speed 0, which is also where even our best models struggled predicting the most. Perhaps if there had been a more evenly distributed amount of data points in each Adoption Speed Bin the model could have been trained better.
+  - Adoption Speed already binned prior to our accessing the data. Given that adoption speed is based on a time-line, had this not previously be categorized we could have performed a LinearRegression Model which has better accuracy than a RandomForest and performs better at predicting time.
