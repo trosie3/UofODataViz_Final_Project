@@ -38,7 +38,9 @@ Cleaned data from clean_trained: 14981 rows, 20 columns (dropped 12 rows with mi
 
 ## Model Results
 We ran 10 different RandomForestClassifer model iterations.
+
 75/25 split, cleaned_train.csv used
+
 - Model 1
   - Features used: all
   - Classification Report:
@@ -66,7 +68,9 @@ We ran 10 different RandomForestClassifer model iterations.
   - Features used: all but type, videoamt, health, word_count/wordbins
   - Classification Report:
   - Accuracy Score: 39.86
+
 75/25 split, cleaned_train_optimized.csv used (see if removed stop words helps improve model)
+
 - Model 7
   - Features used: all with optimzed_word_count (stop words removed) 
   - Classification Report:
@@ -76,7 +80,9 @@ We ran 10 different RandomForestClassifer model iterations.
   - Features used: all with optimzed_word_count (stop words removed) but type, videoamt, health
   - Classification Report:
   - Accuracy Score: 40.79
+
 80/20 split, cleaned_train.csv used (back to first csv because 1 and 2 best models so far)
+
 - Model 9 
   - Features used: all
   - Classification Report:
