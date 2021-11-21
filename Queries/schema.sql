@@ -1,7 +1,5 @@
--- Creating tables for could database
-
+-- Creating tables for database, run colab notebooks to pull data in or upload from csvs in 'data' folder
 CREATE TABLE cleaned_train(
-	index INT,
 	Type INT,
 	Age INT,
 	Breed1 INT,
@@ -22,10 +20,9 @@ CREATE TABLE cleaned_train(
 	AdoptionSpeed INT,
 	word_count INT,
 	Fee_bins INT
-	
 	);
+
 CREATE TABLE cleaned_train_optimized(
-	index INT,
 	Type INT,
 	Age INT,
 	Breed1 INT,
@@ -46,52 +43,6 @@ CREATE TABLE cleaned_train_optimized(
 	AdoptionSpeed INT,
 	optimized_word_count INT,
 	Fee_bins INT
-	);
-
-CREATE TABLE cats_only(
-	Type INT,
-	age INT,
-	breed_id1 INT,
-	breed_id1 INT,
-	gender INT,
-	color_id1 INT,
-	color_id2 INT,
-	color_id3 INT,
-	maturity_size INT,
-	Fur_length INT,
-	vaccinated INT,
-	dewormed INT,
-	sterilized INT,
-	health INT,
-	quantity INT,
-	videoamt INT,
-	photoamt DECIMAL,
-	adoptionspeed INT,
-	word_count INT,
-	fee_bins INT
-	);
-
-CREATE TABLE dogs_only(
-	Type INT,
-	age INT,
-	breed_id1 INT,
-	breed_id1 INT,
-	gender INT,
-	color_id1 INT,
-	color_id2 INT,
-	color_id3 INT,
-	maturity_size INT,
-	Fur_length INT,
-	vaccinated INT,
-	dewormed INT,
-	sterilized INT,
-	health INT,
-	quantity INT,
-	videoamt INT,
-	photoamt DECIMAL,
-	adoptionspeed INT,
-	word_count INT,
-	fee_bins INT
 	);
 
 CREATE TABLE rf_model_data (
@@ -124,6 +75,7 @@ CREATE TABLE rf_predictions_80train20test(
 	Model_10 INT
 	);
 
+-- upload data from cvs for next two tables after creating them
 CREATE TABLE breed_labels (
 	breedid INT,
 	type INT,
@@ -136,3 +88,40 @@ CREATE TABLE color_labels (
 	colorname VARCHAR NOT NULL,
 	UNIQUE (colorname)
 	);
+
+-- STOP, make sure data in all tables before next queries
+-- use SELECT * FROM tablename;
+
+-- create optimized view for models in 80/20 view for viz
+ SELECT 'Actual'::text AS category,
+    rf_predictions_80train20test.index,
+    rf_predictions_80train20test.actual AS accuracy
+   FROM rf_predictions_80train20test
+UNION
+ SELECT 'Model 9'::text AS category,
+    rf_predictions_80train20test.index,
+    rf_predictions_80train20test.model_9 AS accuracy
+   FROM rf_predictions_80train20test
+UNION
+ SELECT 'Model 10'::text AS category,
+    rf_predictions_80train20test.index,
+    rf_predictions_80train20test.model_10 AS accuracy
+   FROM rf_predictions_80train20test;
+-- after view is created
+SELECT * from actual_vs_predicted; -- then F8 to download csv to use in Tableau
+
+
+-- join breed labels and color labels to cleaned_train (project requirement to have a join in database, no needed outside of that)
+-- change column titles used in join to lowercase
+SELECT ct.color1, ct.color2, ct.color3
+FROM cleaned_train AS ct
+LEFT JOIN color_labels AS cl ON
+ct.color1=cl.colorid AND
+ct.color2=cl.colorid AND
+ct.color3=cl.colorid;
+
+SELECT ct.breed1, ct.breed2
+FROM cleaned_train AS ct
+LEFT JOIN breed_labels AS bl ON
+ct.breed1=bl.breedid AND
+ct.breed2=bl.breedid;
