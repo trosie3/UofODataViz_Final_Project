@@ -1,5 +1,6 @@
 # Pet_Finder_Adoption_Prediction
 Link to dashboard - https://public.tableau.com/app/profile/spring7540/viz/AdoptionSpeedbyWordCountDashboard/Story1?publish=yes 
+Google slides link - https://docs.google.com/presentation/d/1FmbpduJhPG039F80fj9dI67I5SFkxphLvJbuMMcZSPg/edit#slide=id.p
 
 ## Project Overview
 Our group chose pet adoption speeds as out topic because as a group we have all had pets and some of us currently have pets. We want to create a machine learning model that predicts the adoption speed. As we are working with data from a previously completed Kaggle challenge and with a limited 4-week timeline, we set our target accuracy at 42.3+% as that would at least get us in the ‘bronze’ if we been participating been in the Kaggle competition when it was open. The top 10 (non-cheating) finalists were all at 44.1+% in the initial contest.
@@ -108,10 +109,10 @@ Bottom three & least important features:
 Type, Health and VideoAmt. We can safety say least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely and their scores improved compared to the models that used all features. (image of final feature impotance graph)
 
 Finding based on our assumptions: what we got right, wrong, and what we missed:
-Wrong : Type and Health, they were actually 2 of the least important features. Also, single color wasn't as important as we suspected it might be. Type was acutlly really suprising to all of us, we really thought dog vs cat might matter more.
-Right : word_count (thus decription) although more important than we originally expected, age and photoamt. All of these turned out to be the top features regardless of model iteration.
-Missed : Color2 more important than we would have guessed (in top 5 features), which kind of make sense and most animals probably are dual-colored. Fee was also lower than we would have thought though we didnt expect it to be a top feature. 
-Unsurprsed by: Most of the bottom half features.
+- Wrong : Type and Health, they were actually 2 of the least important features. Also, single color wasn't as important as we suspected it might be. Type was acutlly really suprising to all of us, we really thought dog vs cat might matter more.
+- Right : word_count (thus decription) although more important than we originally expected, age and photoamt. All of these turned out to be the top features regardless of model iteration.
+- Missed : Color2 more important than we would have guessed (in top 5 features), which kind of make sense and most animals probably are dual-colored. Fee was also lower than we would have thought though we didnt expect it to be a top feature. 
+- Unsurprsed by: Most of the bottom half features.
 
 ### Limitations & Recommendations to improve
 Time 
