@@ -93,17 +93,17 @@ CREATE TABLE color_labels (
 -- use SELECT * FROM tablename;
 
 -- create optimized view for models in 80/20 view for viz
- SELECT 'Actual'::text AS category,
+ SELECT 'actual'::text AS category,
     rf_predictions_80train20test.index,
     rf_predictions_80train20test.actual AS accuracy
    FROM rf_predictions_80train20test
 UNION
- SELECT 'Model 9'::text AS category,
+ SELECT 'model_9'::text AS category,
     rf_predictions_80train20test.index,
     rf_predictions_80train20test.model_9 AS accuracy
    FROM rf_predictions_80train20test
 UNION
- SELECT 'Model 10'::text AS category,
+ SELECT 'model_10'::text AS category,
     rf_predictions_80train20test.index,
     rf_predictions_80train20test.model_10 AS accuracy
    FROM rf_predictions_80train20test;
@@ -112,7 +112,6 @@ SELECT * from actual_vs_predicted; -- then F8 to download csv to use in Tableau
 
 
 -- join breed labels and color labels to cleaned_train (project requirement to have a join in database, no needed outside of that)
--- change column titles used in join to lowercase
 SELECT ct.color1, ct.color2, ct.color3
 FROM cleaned_train AS ct
 LEFT JOIN color_labels AS cl ON
