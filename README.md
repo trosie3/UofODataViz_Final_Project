@@ -10,7 +10,7 @@ Our dataset lists instances of pets that were, or are up for adoption in 2018.
 We obtained dataset from Kaggle's 2018 PetFinder competition. https://www.kaggle.com/c/petfinder-adoption-prediction/data
 
 ### Technology used & explanation of those choices
-Technology file (link)
+Technology file[link](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/technology.md 'link to technology breakdowns')
 
 ### Questions to Answer
 The question we are seeking to answer with our model is the adoption speed of each pet. Secondary question, is what features are most important to predicting this adoption speed, and what suggestions can we make based on that data.
@@ -23,11 +23,12 @@ Slack group: group_project_team_1
 - If struggling with anything don't hesitate reach out to team and/or Terra (project mentor) or Heather (instructor)
 
 ## Data exploration & pre-processing for model
-Raw data from train.csv: 14993 rows, 24 columns
+- Raw data from train.csv: 14993 rows, 24 columns
 
 ### Data used & definitions 
-Data definition file (link)
-Cleaned data from clean_trained: 14981 rows, 20 columns (dropped 12 rows with missing data, and ID columns)
+Data definition file [link](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/data_definitions.md 'link to data definitions')
+Data cleaning code files [link](https://github.com/trosie3/UofODataViz_Final_Project/tree/main/Cleaning:Preprocessing "link to code folder")
+- Cleaned data from clean_trained: 14981 rows, 20 columns (dropped 12 rows with missing data, and ID columns)
 
 ### Assumptions made on which features would have an impact
 - A common saying is 'dogs are man’s best friend' so we suspect that type of pet (dog or cat) to have an impact (image of graph we made)
@@ -64,7 +65,6 @@ We ran 10 different RandomForestClassifer model iterations.
   - Features used: all but type, videoamt, health, vaccinanted, sterilized
   - Classification Report: (image)
   - Accuracy Score: 41.19
-  - Feature importance:
 - Model 5
   - Features used: all with transformed word_count into wordbins
   - Classification Report: (image)
@@ -74,7 +74,8 @@ We ran 10 different RandomForestClassifer model iterations.
   - Features used: all but type, videoamt, health, word_count/wordbins
   - Classification Report: (image)
   - Accuracy Score: 39.86
-
+  - Feature importance:
+  
 75/25 split, cleaned_train_optimized.csv used (see if removed stop words helps improve model)
 
 - Model 7
@@ -114,6 +115,13 @@ Finding based on our assumptions: what we got right, wrong, and what we missed:
 - Missed : Color2 more important than we would have guessed (in top 5 features), which kind of make sense and most animals probably are dual-colored. Fee was also lower than we would have thought though we didnt expect it to be a top feature. 
 - Unsurprsed by: Most of the bottom half features.
 
+Suggestions based on our findings to perhaps improve the next challenge:
+- Have a description, not too long less than 200 words but also more than 40 seems to be key at the faster adoption speeds.
+- Have photos of the pet(s) between at least 3 images and up to 5 appears to be the ticket for faster adoption speeds.
+- Age matters the bulk of all pets regardless of speed were under 65 months, and there appears to be a correlation with adoption speed and age as age goes up so does length of time to adopt. Perhaps consistent photos/descriptions would help with older pets.
+- No video needed. One of the least important features so either not enough videos to fairly judge or videos aren’t needed thus a waste of resources.
+- Focus on the 'health' feature of the pet not necessary. If putting in description probably a ‘waste of words.’
+
 ### Limitations & Recommendations to improve
 Time 
  - Given our 4 week project deadline, what we could perform and analyze was limited. If we had more time we could have:
@@ -124,4 +132,4 @@ Time
  
 Data
   - Limited amount of data point in Adoption Speed 0, which is also where even our best models struggled predicting the most. Perhaps if there had been a more evenly distributed amount of data points in each Adoption Speed Bin the model could have been trained better.
-  - Adoption Speed already binned prior to our accessing the data. Given that adoption speed is based on a time-line, had this not previously be categorized we could have performed a LinearRegression Model which has better accuracy than a RandomForest and performs better at predicting time.
+  - Adoption Speed already binned prior to our accessing the data. Given that adoption speed is based on a time-line, had this not previously be categorized we could have performed a LinearRegression Model which could have given us more clues as to where things weren’t aligning, and perhaps could have been more accurate
