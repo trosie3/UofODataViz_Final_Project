@@ -3,7 +3,7 @@ Link to dashboard - https://public.tableau.com/app/profile/spring7540/viz/Adopti
 Google slides link - https://docs.google.com/presentation/d/1FmbpduJhPG039F80fj9dI67I5SFkxphLvJbuMMcZSPg/edit#slide=id.p
 
 ## Project Overview
-Our group chose pet adoption speeds as out topic because as a group we have all had pets and some of us currently have pets. We want to create a machine learning model that predicts the adoption speed. As we are working with data from a previously completed Kaggle challenge and with a limited 4-week timeline, we set our target accuracy at 42.3+% as that would at least get us in the ‘bronze’ if we been participating been in the Kaggle competition when it was open. The top 10 (non-cheating) finalists were all at 44.1+% in the initial contest.
+Our group chose pet adoption speed as our topic, because the members of our group are animal lovers. We want to create a machine learning model that predicts the adoption speed. As we are working with data from a previously completed Kaggle challenge and with a limited 4-week timeline, we set our target accuracy at 42.3+% as that would at least get us in the ‘bronze’ if we been participating been in the Kaggle competition when it was open. The top 10 (non-cheating) finalists were all at 44.1+% in the initial contest.
 
 ### Source Data
 Our dataset lists instances of pets that were, or are up for adoption in 2018.
@@ -13,7 +13,7 @@ We obtained dataset from Kaggle's 2018 PetFinder competition. https://www.kaggle
 Technology file[link](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/technology.md 'link to technology breakdowns')
 
 ### Questions to Answer
-The question we are seeking to answer with our model is the adoption speed of each pet. Secondary question, is what features are most important to predicting this adoption speed, and what suggestions can we make based on that data.
+The question we are seeking to answer with our model is the adoption speed of each pet. The secondary question is what features are most important to predicting this adoption speed, and what suggestions can we make based on that data?
 
 ### Group Communication Protocols
 Slack group: group_project_team_1
@@ -32,15 +32,15 @@ Data cleaning code files [link](https://github.com/trosie3/UofODataViz_Final_Pro
 
 ### Assumptions made on which features would have an impact
 - A common saying is 'dogs are man’s best friend' so we suspect that type of pet (dog or cat) to have an impact (image of graph we made)
-  - any piliminary coorilation from graph??? 
-- Health of the pet might will have a significant impact, most people would probably adopt healthy over injured. (image of graph we made)
-  - any piliminary coorilation from graph??? 
+  - any preliminary correlation from  graph? 
+- Health of the pet might have a significant impact, most people would probably adopt healthy over injured. (image of graph we made)
+  - any preliminary correlation from graph? 
 - Age of the pet to have a large impact. Everyone loves kittens and puppies, and older pets may be 'less adoptable.' (image of graph we made)
-  - any piliminary coorilation from graph??? 
+  - any preliminary correlation from graph??? 
 - The number of photos of the pet(s) will a have an impact, if looking online you are probably looking for pictures and then scrolling through them as part of the decision process. (image of graph we made)
-  - any piliminary coorilation from graph??? 
+  - any preliminary correlation from graph??? 
 - A common thought is that black pets are less adoptable, so 'color1' might have more an impact (image of graph we made)
-  - any piliminary coorilation from graph??? 
+  - any preliminary correlation from graph??? 
 - The description will likely be at least somewhat important perhaps towards the top, not everyone reads descriptions but many do. 
 
 ## Model Results
@@ -101,19 +101,19 @@ We ran 10 different RandomForestClassifer model iterations.
   - Accuracy Score: 42.54
 
 ## Summary & Findings
-Model 10, 9, 2, and 1 were out best models. Models 10 and 2 dropped the 3 features show in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. (image of graph we made of model 9 and 10?)
+Model 10, 9, 2, and 1 were our best models. Models 10 and 2 dropped the 3 features shown in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. (image of graph we made of model 9 and 10?)
 
 Top Three Features from best model:
 Word_count (decripton column transformation), Age, and PhotoAmt (transformed into the bins we created). Even though Age and PhotoAmt switched places these three features remained key in each model iteration regardless of split or csv pulled in. 
 
 Bottom three & least important features:
-Type, Health and VideoAmt. We can safety say least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely and their scores improved compared to the models that used all features. (image of final feature impotance graph)
+Type, Health and VideoAmt. We can safety say least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely and their scores improved compared to the models that used all features. (image of final feature importance graph)
 
 Finding based on our assumptions: what we got right, wrong, and what we missed:
-- Wrong : Type and Health, they were actually 2 of the least important features. Also, single color wasn't as important as we suspected it might be. Type was acutlly really suprising to all of us, we really thought dog vs cat might matter more.
-- Right : word_count (thus decription) although more important than we originally expected, age and photoamt. All of these turned out to be the top features regardless of model iteration.
-- Missed : Color2 more important than we would have guessed (in top 5 features), which kind of make sense and most animals probably are dual-colored. Fee was also lower than we would have thought though we didnt expect it to be a top feature. 
-- Unsurprsed by: Most of the bottom half features.
+- Wrong : Type and Health, they were actually 2 of the least important features. Also, single color wasn't as important as we suspected it might be. Type was actually really surprising to all of us, we really thought dog versus cat might matter more.
+- Right : word_count (thus description) although more important than we originally expected, age and photo amt. All of these turned out to be the top features regardless of model iteration.
+- Missed : Color2 more important than we would have guessed (in top 5 features), which kind of make sense and most animals probably are dual-colored. Fee was also lower than we would have thought though we didn't expect it to be a top feature. 
+- Unsurprised by: Most of the bottom half features.
 
 Suggestions based on our findings to perhaps improve the next challenge:
 - Have a description, not too long less than 200 words but also more than 40 seems to be key at the faster adoption speeds.
@@ -132,4 +132,4 @@ Time
  
 Data
   - Limited amount of data point in Adoption Speed 0, which is also where even our best models struggled predicting the most. Perhaps if there had been a more evenly distributed amount of data points in each Adoption Speed Bin the model could have been trained better.
-  - Adoption Speed already binned prior to our accessing the data. Given that adoption speed is based on a time-line, had this not previously be categorized we could have performed a LinearRegression Model which could have given us more clues as to where things weren’t aligning, and perhaps could have been more accurate
+  - Adoption Speed already binned prior to our accessing the data. Given that adoption speed is based on a time-line, had this not previously be categorized we could have performed a LinearRegression Model which could have given us more clues as to where things weren’t aligning, and perhaps could have been more accurate.
