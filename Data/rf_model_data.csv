@@ -1,11 +1,11 @@
-Model_Num,Accuracy_Score(%),Train_and_Test_Splits(%),Features_Used,Model_Ranking
-1,41.35,75/25,all,4
-2,41.59,75/25,"all but type, videoamt, health",3
-3,36.28,75/25,"only these: word_count, photoamt, age, color2, bread1, color1, breed2",10
-4,41.19,75/25,"all but type, videoamt, health, vaccinanted, sterilized",5
-5,41.14,75/25,all with transformed word_count into wordbins,6
-6,39.86,75/25,"all but type, videoamt, health, word_count/wordbins",9
-7,40.44,75/25,all with optimzed_word_count(stop words removed),8
-8,40.79,75/25,"all with optimzed_word_count(stop words removed) but type, videoamt, health",7
-9,42.24,80/20,all,2
-10,42.54,80/20,"all but type, videoamt, health",1
+"index","model_num","accuracy_score(%)","train_and_test_splits(%)","features_used","model_ranking"
+"0","1","41.35","75/25","all","4"
+"1","2","41.59","75/25","all but type, videoamt, health","3"
+"2","3","36.28","75/25","only these: word_count, photoamt, age, color2, bread1, color1, breed2","10"
+"3","4","41.19","75/25","all but type, videoamt, health, vaccinanted, sterilized","5"
+"4","5","41.14","75/25","model2 with transformed word_count into wordbins","6"
+"5","6","39.86","75/25","model2 without word_count, wordbins","9"
+"6","7","40.44","75/25","all with optimzed_word_count(stop words removed)","8"
+"7","8","40.79","75/25","all with optimzed_word_count(stop words removed) but type, videoamt, health","7"
+"8","9","42.24","80/20","all","2"
+"9","10","42.54","80/20","all but type, videoamt, health","1"
