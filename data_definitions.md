@@ -43,14 +43,14 @@ PhotoAmt - Total uploaded photos(pics) for a profile (original values replaced w
 - 12 - 12 pics
 - 13 - 13 or more pics
 
-word_count - Number of words in the Description column of a profile. Descrption column dropped and replaced with this data because that data was a string and we wanted a numeric value to proform analysis on.
+word_count - Number of words in the Description column of a profile. The Description column was dropped and replaced with this data because that data was a string and we wanted a numeric value to perform analysis on.
 
-word_count_optimized - Number of words in the Description column of a profile with stop words removed. 2nd try at Descrption column to see if would make model more affective. Dropped raw Description and replaced with this data because that data was a string and we wanted a numeric value to proform analysis on, and wanted to see if stop words played a role int eh model.
+word_count_optimized - Number of words in the Description column of a profile with stop words removed. Second try at Description column to see if would make ther model more effective. We dropped raw Description and replaced it with this data because the original Description column values were strings and we wanted a numeric value to perform analysis on.  We wanted to see if stop words played a role in the model.
 
 ### unchanged columns definitions:
 - Type - Type of animal (1 = Dog, 2 = Cat)
 - Age - Age of pet when listed, in months
-- Breed1 - Primary breed of pet (Refer to BreedLabels csv dictionary)
+- Breed1 - Primary breed of pet (Refer to BreedLabels.csv dictionary)
 - Breed2 - Secondary breed of pet, if pet is of mixed breed (Refer to BreedLabels csv dictionary)
 - Gender - Gender of pet (1 = Male, 2 = Female, 3 = Mixed, if profile represents group of pets)
 - Color1 - Color 1 of pet (Refer to ColorLabels csv dictionary)
