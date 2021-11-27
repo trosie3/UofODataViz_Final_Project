@@ -33,15 +33,15 @@ Data cleaning code files [link](https://github.com/trosie3/UofODataViz_Final_Pro
 
 ### Assumptions made on which features would have an impact
 - A common saying is 'dogs are man’s best friend' so we suspect that type of pet (dog or cat) to have an impact (image of graph we made)
-  - At speed 0 and 1, cats appear to be adopted slightly faster. Speed 4 (which is still in shelter) more dog than cats appear to still be unadopted.
+  - At speed 0 and 1, cats appear to be adopted slightly faster. Speed 4 (which is still in shelter) more dogs than cats appear to still be unadopted.
 - Health of the pet might have a significant impact, most people would probably adopt healthy over injured. (image of graph we made)
   - Most pets appear to be healthy in this data set, and the pattern of speed follows that of the overall speed break down.
 - Age of the pet to have a large impact. Everyone loves kittens and puppies, and older pets may be 'less adoptable.' (image of graph we made)
-  - Most pets are under the 65 month. This graph does appear t show that as age increased and the time it tkaes a pet to get adopted increases as well.
+  - Most pets are under the 65 month. This graph does appear to show that as age increased and the time it takes a pet to get adopted increases as well.
 - The number of photos of the pet(s) will a have an impact, if looking online you are probably looking for pictures and then scrolling through them as part of the decision process. (image of graph we made)
   - Most pets have photos, bulk of them have between 1 and 5 photos.
 - A common thought is that black pets are less adoptable, so 'color1' might have more an impact (image of graph we made)
-  - For both cats and dogs, the largest number of pets are still at the shelter(speed 4). Compared to othr single colored animals a pattern is hard to discern, other than of the single colored animals there are more black only pets in this dataset over.
+  - (check Bren) For both cats and dogs, the largest number of pets are still at the shelter(speed 4). Compared to other single colored animals a pattern is hard to discern, other than of the single colored animals there are more black only pets in this dataset over.
 - The description will likely be at least somewhat important perhaps towards the top, not everyone reads descriptions but many do. (image of speed vs word count)
   - At most descriptions are under 250 words, with the three faster speed being closer to 200. There does appear to be some coordination that as word count goes up the timeline of the pet adoption also increases.
 
@@ -106,10 +106,10 @@ We ran 10 different RandomForestClassifer model iterations.
 Model 10, 9, 2, and 1 were our best models. Models 10 and 2 dropped the 3 features shown in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. (image of graph we made of model 9 and 10?)
 
 Top Three Features from best model:
-Word_count (decripton column transformation), Age, and PhotoAmt (transformed into the bins we created). Even though Age and PhotoAmt switched places these three features remained key in each model iteration regardless of split or csv pulled in. 
+Word_count (descripton column transformation), Age, and PhotoAmt (transformed into the bins we created). Even though Age and PhotoAmt switched places these three features remained key in each model iteration regardless of split or csv pulled in. 
 
 Bottom three & least important features:
-Type, Health and VideoAmt. We can safety say least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely and their scores improved compared to the models that used all features. (image of final feature importance graph)
+Type, Health and VideoAmt. We can safety say (Bren Edit) these are the(Bren Edit) least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely and their scores improved compared to the models that used all features. (image of final feature importance graph)
 
 Based on our assumptions: what we got right, wrong, and what we missed:
 - Wrong : Type and Health, they were actually 2 of the least important features. Also, single color wasn't as important as we suspected it might be. Type was actually really surprising to all of us, we really thought dog versus cat might matter more.
@@ -138,4 +138,4 @@ Time
 Data
   - Limited amount of data point in Adoption Speed 0, which is also where even our best models struggled predicting the most. Perhaps if there had been a more evenly distributed amount of data points in each Adoption Speed Bin the model could have been trained better.
   - Adoption Speed already binned prior to our accessing the data. Given that adoption speed is based on a time-line, had this not previously be categorized we could have performed a LinearRegression Model which could have given us more clues as to where things weren’t aligning, and perhaps could have been more accurate.
-  - With photoamt being a ke feature, perhaps if the images were provided an analysis of the images could be performed to key into what images help make the pets more adoptable which would then better their adaoption timeline.
+  - With photoamt being a key feature, perhaps if the images were provided an analysis of the images could be performed to key into what images help make the pets more adoptable which would then better their adaoption timeline.
