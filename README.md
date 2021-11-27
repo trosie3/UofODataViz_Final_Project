@@ -138,4 +138,4 @@ Time
 Data
   - Limited amount of data point in Adoption Speed 0, which is also where even our best models struggled predicting the most. Perhaps if there had been a more evenly distributed amount of data points in each Adoption Speed Bin the model could have been trained better.
   - Adoption Speed already binned prior to our accessing the data. Given that adoption speed is based on a time-line, had this not previously be categorized we could have performed a LinearRegression Model which could have given us more clues as to where things weren’t aligning, and perhaps could have been more accurate.
-  - With photoamt being a ke feature, perhaps if the images were provided an analysis of the images could be performed to key into what images help make the pets more adoptable which would then better their adaoption timeline.
+  - With photoamt being a key feature, perhaps if the images were provided an analysis of the images could be performed to key into what images help make the pets more adoptable which would then better their adaoption timeline.
