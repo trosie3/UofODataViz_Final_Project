@@ -1,4 +1,4 @@
-# Definitions of Columns
+# Definitions of Columns in Dataset
 
 ## Target data
 AdoptionSpeed - value we are trying to predict
@@ -11,7 +11,7 @@ Categorical speed of adoption. Lower is faster.
 
 ## Feature data
 ### Transformed data defintions
-Fee_bins - Adoption fee (Fee column dropped and replaced with this data)
+Fee_bins - Adoption fee (Original fee column dropped and replaced with this data)
 - 0 - free
 - 1 - fee 1-50
 - 2 - fee 51-100
@@ -19,7 +19,7 @@ Fee_bins - Adoption fee (Fee column dropped and replaced with this data)
 - 4 - fee 151-200
 - 5 - fee 201+
 
-Quantity - Number of pets represented in a profie
+Quantity - Number of pets represented in a profie (original values replaced with these data bins)
 - 1 - 1 pet
 - 2 - 2 pets
 - 3 - 3 pets
@@ -27,7 +27,7 @@ Quantity - Number of pets represented in a profie
 - 5 - 5 pets
 - 6 - 6 or more
 
-PhotoAmt - Total uploaded photos(pics) for a profile
+PhotoAmt - Total uploaded photos(pics) for a profile (original values replaced with these data bins)
 - 0 - no pics
 - 1 - 1 pic
 - 2 - 2 pics
@@ -43,14 +43,14 @@ PhotoAmt - Total uploaded photos(pics) for a profile
 - 12 - 12 pics
 - 13 - 13 or more pics
 
-word_count - Number of words in the Description column of a profile. Descrption column dropped and replaced with this data because that data was a string and we wanted a numeric value to proform analysis on.
+word_count - Number of words in the Description column of a profile. The Description column was dropped and replaced with this data because that data was a string and we wanted a numeric value to perform analysis on.
 
-word_count_optimized - Number of words in the Description column of a profile with stop words removed. 2nd try at Descrption column to see if would make model more affective. Dropped raw Description and replaced with this data because that data was a string and we wanted a numeric value to proform analysis on, and wanted to see if stop words played a role int eh model.
+word_count_optimized - Number of words in the Description column of a profile with stop words removed. Second try at Description column to see if would make ther model more effective. We dropped raw Description and replaced it with this data because the original Description column values were strings and we wanted a numeric value to perform analysis on.  We wanted to see if stop words played a role in the model.
 
 ### unchanged columns definitions:
 - Type - Type of animal (1 = Dog, 2 = Cat)
 - Age - Age of pet when listed, in months
-- Breed1 - Primary breed of pet (Refer to BreedLabels csv dictionary)
+- Breed1 - Primary breed of pet (Refer to BreedLabels.csv dictionary)
 - Breed2 - Secondary breed of pet, if pet is of mixed breed (Refer to BreedLabels csv dictionary)
 - Gender - Gender of pet (1 = Male, 2 = Female, 3 = Mixed, if profile represents group of pets)
 - Color1 - Color 1 of pet (Refer to ColorLabels csv dictionary)
@@ -64,7 +64,7 @@ word_count_optimized - Number of words in the Description column of a profile wi
 - Health - Health Condition (1 = Healthy, 2 = Minor Injury, 3 = Serious Injury, 0 = Not Specified)
 - VideoAmt - Total uploaded videos for this pet
 
-## Dropped columns - didn't transform or use all are identification columns
+## Dropped columns - didn't transform or use in model, all these columns are identification columns
 - PetID - Unique hash ID of pet profile
 - Name - Name of pet (Empty if not named)
 - State - State location in Malaysia (Refer to StateLabels dictionary)
