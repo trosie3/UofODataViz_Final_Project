@@ -15,13 +15,6 @@ Technology file[link](https://github.com/trosie3/UofODataViz_Final_Project/blob/
 ### Questions to Answer
 The question we are seeking to answer with our model is the adoption speed of each pet. The secondary question is what features are most important to predicting this adoption speed, and what suggestions can we make based on that data?
 
-### Group Communication Protocols
-Slack group: group_project_team_1
-- Let the team know if you are going to miss a scheduled get together time
-- Let the team know when requested when you can meet next
-- @ Rosie when have a pull request so she can do merges to the main branch
-- If struggling with anything don't hesitate reach out to team and/or Terra (project mentor) or Heather (instructor)
-
 ## Data exploration & pre-processing for model
 - Raw data from train.csv: 14993 rows, 24 columns
 
