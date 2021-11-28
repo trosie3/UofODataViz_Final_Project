@@ -1,9 +1,9 @@
-# how to create, login locally, and code for notebooks
+# How to create, login locally, and code for notebooks
 
-## to set up clouddata base (first time through only)
+## To set up cloud database (first time through only)
  - go to AWS
  - login
- - follow instuctions set up a new RDS instance for pdAdmin 
+ - follow instructions set up a new RDS instance for pgAdmin 
  - get endpoint and follow next steps
 
 ## To connect to the cloud database (for the team after intial set up from step above)
@@ -12,20 +12,20 @@
  - endpoint: 'dataviz.c6b1qjayiqhf.us-west-2.rds.amazonaws.com'
  - postgres / postgres
  - password (see config) shared config sperately via slack channel as gitignore will keep it from uploading to github
-- first person to connect to live database: use schema to set up tables, upload color/breed labels csvs, run colab notebooks (both data cleaning and mlmodel) to pull in the rest of the tables
+- first person to connect to live database: use schema to set up tables, upload color/breed labels csvs, run colab notebooks (both data cleaning and ML model) to pull in the rest of the tables
 
 ## To create a local a local data instead of linking to cloud database
 - pgAdmin4
 - create new database
 - open query tool
 - use schema to create tables
-- upload csvs in 'data' folder into tables, and run colab notebooks to download table data that way
+- upload CSVs in 'data' folder into tables, and run Colab notebooks to download table data that way
 
 ## To connect to database in colab use the following code:
 - imports
         import pandas as pd
-        import sqlalchemy
-        from sqlalchemy import create_engine
+        import SQLAlchemy
+        from SQLAlchemy import create_engine
 
         from getpass import getpass
         password = getpass('Enter database password')
