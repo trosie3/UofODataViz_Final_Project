@@ -1,5 +1,5 @@
 # Pet_Finder_Adoption_Prediction
-Link to dashboard with intergrated Google Slides - https://public.tableau.com/app/profile/spring7540/viz/PetFinder_PredictionofAdoptionSpeed/PetFinderStory?publish=yes
+Link to dashboard with integrated Google Slides - https://public.tableau.com/app/profile/spring7540/viz/PetFinder_PredictionofAdoptionSpeed/PetFinderStory?publish=yes
 Google Slides link - https://docs.google.com/presentation/d/1FmbpduJhPG039F80fj9dI67I5SFkxphLvJbuMMcZSPg/edit#slide=id.p
 
 ## Project Overview
@@ -10,7 +10,7 @@ Our dataset lists instances of pets that were, or are up for adoption in 2018.
 We obtained dataset from Kaggle's 2018 PetFinder competition. https://www.kaggle.com/c/petfinder-adoption-prediction/data
 
 ### Technology used & explanation of those choices
-Technology file[link](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/technology.md 'link to technology breakdowns')
+Technology file [link](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/technology.md 'link to technology breakdowns')
 
 ### Questions to Answer
 The question we are seeking to answer with our model is the adoption speed of each pet. The secondary question is what features are most important to predicting this adoption speed, and what suggestions can we make based on that data?
@@ -30,12 +30,12 @@ Data cleaning code files [link](https://github.com/trosie3/UofODataViz_Final_Pro
 - Health of the pet might have a significant impact, most people would probably adopt healthy over injured. (image of graph we made)
   - Most pets appear to be healthy in this data set, and the pattern of speed follows that of the overall speed break down.
 - Age of the pet to have a large impact. Everyone loves kittens and puppies, and older pets may be 'less adoptable.' (image of graph we made)
-  - Most pets are under the 65 month. This graph does appear to show that as age increased and the time it takes a pet to get adopted increases as well.
+  - Most pets are under the 65 months old. This graph does appear to show that as age increased and the time it takes a pet to get adopted increases as well.
 - The number of photos of the pet(s) will a have an impact, if looking online you are probably looking for pictures and then scrolling through them as part of the decision process. (image of graph we made)
   - Most pets have photos, bulk of them have between 1 and 5 photos.
 - A common thought is that black pets are less adoptable, so 'color1' might have more an impact (image of graph we made)
-  - (check Bren) For both cats and dogs, the largest number of pets are still at the shelter(speed 4). Compared to other single colored animals a pattern is hard to discern, other than of the single colored animals there are more black only pets in this dataset over.
-- The description will likely be at least somewhat important perhaps towards the top, not everyone reads descriptions but many do. (image of speed vs word count)
+  - For both cats and dogs, the largest number of black pets are still at the shelter (speed 4). Compared to other single colored animals, a pattern is hard to discern, other than- of the single colored animals- there are more black only pets in this dataset over other colors. 
+- The description will likely be at least somewhat important perhaps towards the top, not everyone reads descriptions, but many do. (image of speed vs word count)
   - At most descriptions are under 250 words, with the three faster speed being closer to 200. There does appear to be some coordination that as word count goes up the timeline of the pet adoption also increases.
 
 ## Model Results
@@ -102,7 +102,7 @@ Top Three Features from best model:
 Word_count (descripton column transformation), Age, and PhotoAmt (transformed into the bins we created). Even though Age and PhotoAmt switched places these three features remained key in each model iteration regardless of split or csv pulled in. 
 
 Bottom three & least important features:
-Type, Health and VideoAmt. We can safety say (Bren Edit) these are the(Bren Edit) least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely and their scores improved compared to the models that used all features. (image of final feature importance graph)
+Type, Health and VideoAmt. We can safely say these are the least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely, and their scores improved compared to the models that used all features. (image of final feature importance graph)
 
 Based on our assumptions: what we got right, wrong, and what we missed:
 - Wrong : Type and Health, they were actually 2 of the least important features. Also, single color wasn't as important as we suspected it might be. Type was actually really surprising to all of us, we really thought dog versus cat might matter more.
@@ -113,9 +113,9 @@ Based on our assumptions: what we got right, wrong, and what we missed:
 Elephant in the room, while our final model performed well at 42.5% which in the original competition would have gotten us in the bronze and even the best entry had an accuracy of only 44.99%, these models probably are not that helpful to PetFinder for actually predicting adoption speed. However, we can make some suggestions based on our findings, that may produce better data for the next attempt.
 
 - Have a description, not too long less than 200 words but also more than 40 seems to be key at the faster adoption speeds.
-- Have photos of the pets: at least 1 images and up to 5 appears to be the ticket for faster adoption speeds. More than that is a waste of resources.
-- Age matters the bulk of all pets regardless of speed were under 65 months, and there appears to be a correlation with adoption speed and age as age goes up so does length of time to adopt. Perhaps with consistent photos/descriptions would help with older pets.
-- No video needed. One of the least important features so either not enough videos to fairly judge, or videos aren’t needed thus a waste of resources.
+- Have photos of the pets: at least 1 image and up to 5 appears to be the ticket for faster adoption speeds. More than that is a waste of resources.
+- Age matters: the bulk of all pets, regardless of adoption speed were under 65 months, and there appears to be a correlation with adoption speed and age- as age goes up so does length of time to adopt. Perhaps consistent photos/descriptions would help with older pets.
+- No video needed. One of the least important features- so either not enough videos to fairly judge, or videos aren’t needed- thus a waste of resources.
 - Focus on the 'health' feature of the pet not necessary. If putting in description probably a ‘waste of words.’
 
 If these changes where to made to make some things more consistent perhaps the next attempt at making a model for PetFinder would allow for better models.
@@ -125,10 +125,10 @@ Time
  - Given our 4 week project deadline, what we could perform and analyze was limited. If we had more time we could have:
    - Tried other types of models and compared them. 
    - Adjusting bins/catergories we made perhaps some of them weren't as accurate as they could have been. Better categorization could have increase accuracy.
-   - After removing stop words in the optimization run through, we could have attempted the binning process to see if that made a difference, as logic suggestions removing the stop words should have improved the model but it didn't.
-   - Better yet we could have performed a full Natural Language Processing breakdown on the description column instead of only looking at the word lenght in each description. By being able to look at the sentiment of a description and rank those descriptions, it may have increased the accuracy of the model.
+   - After removing stop words in the optimization run through, we could have attempted the binning process to see if that made a difference, as logic suggests removing the stop words should have improved the model, but it didn't.
+   - Better yet we could have performed a full Natural Language Processing breakdown on the description column instead of only looking at the word length in each description. By being able to look at the sentiment of a description and rank those descriptions, it may have increased the accuracy of the model.
  
 Data
   - Limited amount of data point in Adoption Speed 0, which is also where even our best models struggled predicting the most. Perhaps if there had been a more evenly distributed amount of data points in each Adoption Speed Bin the model could have been trained better.
   - Adoption Speed already binned prior to our accessing the data. Given that adoption speed is based on a time-line, had this not previously be categorized we could have performed a LinearRegression Model which could have given us more clues as to where things weren’t aligning, and perhaps could have been more accurate.
-  - With photoamt being a key feature, perhaps if the images were provided an analysis of the images could be performed to key into what images help make the pets more adoptable which would then better their adaoption timeline.
+  - With photo amt being a key feature, perhaps if the images were provided an analysis of the images could be performed to key into what images help make the pets more adoptable, which would then better their adoption timeline.
