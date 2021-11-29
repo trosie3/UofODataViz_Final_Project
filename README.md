@@ -23,7 +23,7 @@ The question we are seeking to answer with our model is the adoption speed of ea
 ### Data used & definitions
 [Data Definitions](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/data_definitions.md 'link to data definitions')
 
-Data cleaning [link to code](https://github.com/trosie3/UofODataViz_Final_Project/tree/main/Cleaning:Preprocessing "link to code folder")
+Data cleaning and pre-processing got model [link to code](https://github.com/trosie3/UofODataViz_Final_Project/tree/main/Cleaning:Preprocessing "link to code folder")
 - Cleaned data from clean_trained: 14981 rows, 20 columns (dropped 12 rows with missing data, and ID columns)
 - Largest amount of data points in speed 2 and 4, followed but 3 and 1, with speed 0 having far fewer than the rest.
 ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/adoption_speed.png)
