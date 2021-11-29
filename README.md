@@ -130,7 +130,7 @@ We ran 10 different RandomForestClassifier model iterations. [Link to code](http
   - Accuracy Score: 42.54
 
 ## Summary & Findings
-Model 10, 9, 2, and 1 were our best models. Models 10 and 2 dropped the 3 features shown in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. Our best model predicted speed 1 and 2 well, did okay at speed 3 and 4 but not great, and performed poorly at predicting speed 0. 
+Model 10, 9, 2, and 1 were our best models. Models 10 and 2 dropped the 3 features shown in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. Our best model (model 10) predicted speed 1 and 2 well, did okay at speed 3 and 4, and performed poorly at predicting speed 0 if looking at total count. If looking at recall from confusion matrix above our best model perfomed best at prediciting speed 4, then well at speed 1 and 2, okay at speed 3 and very poorly at speed 0.
 
 <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/actual_vs_predicted_accuracy.png' width=60% height=60%>
 
