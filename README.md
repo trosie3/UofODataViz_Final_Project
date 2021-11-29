@@ -145,7 +145,7 @@ Based on our assumptions what we got right, wrong, and what we missed in Feature
 - Unsurprised by: Most of the bottom half features.
 
 ## Recommendations Based on Findings
-Elephant in the room, while our final model performed well at 42.5% which in the original competition would have gotten us in the bronze and even the best entry had an accuracy of only 44.99%, these models probably are not that helpful to PetFinder for actually predicting adoption speed. However, we can make some suggestions based on our findings, that may produce better data for the next attempt.
+Elephant in the room, while our final model performed well at 42.54% which in the original competition would have gotten us in the bronze and where the best entry had an accuracy of 44.99%, these models probably are not that helpful to PetFinder for actually predicting adoption speed. However, we can make some suggestions based on our findings, that may produce better data for the next attempt.
 
 - Have a description, not too long less than 200 words but also more than 40 seems to be key at the faster adoption speeds.
 - Have photos of the pets: at least 1 image and up to 5 appears to be the ticket for faster adoption speeds. More than that is a waste of resources.
