@@ -43,9 +43,9 @@ PhotoAmt - Total uploaded photos(pics) for a profile (original values replaced w
 - 12 - 12 pics
 - 13 - 13 or more pics
 
-word_count - Number of words in the Description column of a profile. The Description column was dropped and replaced with this data because that data was a string and we wanted a numeric value to perform analysis on.
+word_count - Number of words in the Description column of a profile. The Description column was dropped and replaced with this data because the description was a string and we wanted a numeric value to perform analysis on.
 
-word_count_optimized - Number of words in the Description column of a profile with stop words removed. Second try at Description column to see if would make ther model more effective. We dropped raw Description and replaced it with this data because the original Description column values were strings and we wanted a numeric value to perform analysis on.  We wanted to see if stop words played a role in the model.
+word_count_optimized - Number of words in the Description column of a profile with stop words removed. Second try at Description column to see if would make the model more effective. We dropped raw Description and replaced it with this data because the original Description column values were strings and we wanted a numeric value to perform analysis on.  We wanted to see if stop words played a role in the model.
 
 ### unchanged columns definitions:
 - Type - Type of animal (1 = Dog, 2 = Cat)
