@@ -117,10 +117,10 @@ We ran 10 different RandomForestClassifier model iterations. [Link to code](http
   
   - Accuracy Score: 42.24
   - Feature importance: to the right
-- Model 10, target accuracy hit
+- Model 10, target accuracy hit / **Final Model**
   - Features used: all but type, videoamt, health
-  - Classification Report:
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model10_cr.png' width=40% height=40% align=center>
+  - Confusion Matrix and Classification Report:
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/finalmodelcrcm.png' width=60% height=60% align=center>
   
   - Accuracy Score: 42.54
 
