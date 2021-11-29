@@ -117,15 +117,20 @@ We ran 10 different RandomForestClassifier model iterations. [Link to code](http
   
   - Accuracy Score: 42.24
   - Feature importance: to the right
-- Model 10, target accuracy hit / **Final Model**
+- Model 10 target accuracy hit / **Final Model**
   - Features used: all but type, videoamt, health
   - Confusion Matrix and Classification Report:
+     - Actual 0 count 73 vs Predicted 0 count 6 : way under on total number, did poorly at getting any of speed 0 right
+     - Actual 1 count 631 vs Predicted 1 count 589 : slightly under on total number, did fairly well at getting of speed 1 right
+     - Actual 2 count 806 vs Predicted 2 count 830 : slightly over on total number, did fairly well at getting of speed 2 right
+     - Actual 3 count 633 vs Predicted 3 count 511 : under on total number, did okay at getting of speed 3 right
+     - Actual 4 count 854 vs Predicted 4 count 1061 : over on total number, did well at getting most of speed 4 right
   <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/finalmodelcrcm.png' width=60% height=60% align=center>
   
   - Accuracy Score: 42.54
 
 ## Summary & Findings
-Model 10, 9, 2, and 1 were our best models. Models 10 and 2 dropped the 3 features shown in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. Our Models predicted speed 1 and 2 well, did okay at speed 3 and 4 but not great, and performed poorly at predicting speed 0.
+Model 10, 9, 2, and 1 were our best models. Models 10 and 2 dropped the 3 features shown in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. Our best model predicted speed 1 and 2 well, did okay at speed 3 and 4 but not great, and performed poorly at predicting speed 0. 
 
 <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/actual_vs_predicted_accuracy.png' width=60% height=60%>
 
