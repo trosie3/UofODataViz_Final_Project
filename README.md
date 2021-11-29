@@ -1,4 +1,5 @@
-PetFinder Adoption Prediction
+# PetFinder Adoption Prediction
+
 [Link to Dashboard with Integrated Google Slides](https://public.tableau.com/app/profile/spring7540/viz/PetFinder_PredictionofAdoptionSpeed/PetFinderStory?publish=yes 'link to dashboard')
 
 [Google Slides Only](https://docs.google.com/presentation/d/1FmbpduJhPG039F80fj9dI67I5SFkxphLvJbuMMcZSPg/edit#slide=id.p 'link to gs')
