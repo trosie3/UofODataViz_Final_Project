@@ -1,4 +1,4 @@
-# Pet_Finder_Adoption_Prediction
+PetFinder Adoption Prediction
 [Link to Dashboard with Integrated Google Slides](https://public.tableau.com/app/profile/spring7540/viz/PetFinder_PredictionofAdoptionSpeed/PetFinderStory?publish=yes 'link to dashboard')
 
 [Google Slides Only](https://docs.google.com/presentation/d/1FmbpduJhPG039F80fj9dI67I5SFkxphLvJbuMMcZSPg/edit#slide=id.p 'link to gs')
@@ -24,7 +24,7 @@ The question we are seeking to answer with our model is the adoption speed of ea
 
 Data cleaning code files [link to code](https://github.com/trosie3/UofODataViz_Final_Project/tree/main/Cleaning:Preprocessing "link to code folder")
 - Cleaned data from clean_trained: 14981 rows, 20 columns (dropped 12 rows with missing data, and ID columns)
-- Largest amount of data points in speed 2 and 4, followed but 3 and 1, with speed 0 having far fewer thn all data points.
+- Largest amount of data points in speed 2 and 4, followed but 3 and 1, with speed 0 having far fewer than the rest.
 ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/adoption_speed.png)
 
 ### Assumptions made on which features would have an impact
@@ -41,14 +41,14 @@ Data cleaning code files [link to code](https://github.com/trosie3/UofODataViz_F
   - Most pets have photos, bulk of them have between 1 and 5 photos.
   <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/photo_amount_filtered_by_adoption_speed.png' width=70% height=70%>
 - A common thought is that black pets are less adoptable, so 'color1' might have more an impact
-  - For both cats and dogs, the largest number of datapoints are still at the shelter (speed 4). Compared to other single colored animals, a pattern is hard to discern, other than - of the single colored animals - there appear to be more black pets. 
+  - For both cats and dogs, the largest number of datapoints are still at the shelter (speed 4). Compared to other single-colored animals, a pattern is hard to discern, other than - of the single-colored animals - there appear to be more black pets. 
   <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/adoption_speed_of_black_pets.png' width=70% height=70%>
 - The description will likely be at least somewhat important perhaps towards the top, not everyone reads descriptions, but many do.
-  - At most descriptions are under 250 words, with the three faster speed being closer to 200. There does appear to be some coordination that as word count goes up the timeline of the pet adoption also increases.
+  - At most descriptions are under 250 words, with the three faster speeds being closer to 200. There does appear to be some coordination that as word count goes up the timeline of the pet adoption also increases.
   <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/asvswdwithbwp.png' width=50% height=50%>
 
 ## Model Results
-We ran 10 different RandomForestClassifer model iterations.
+We ran 10 different RandomForestClassifier model iterations.
 
 75/25 split, cleaned_train.csv used
 
@@ -124,13 +124,13 @@ We ran 10 different RandomForestClassifer model iterations.
   - Accuracy Score: 42.54
 
 ## Summary & Findings
-Model 10, 9, 2, and 1 were our best models. Models 10 and 2 dropped the 3 features shown in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. Our Models predicted speed 1 and 2 well, did okay at speed 3 and 4 but not great, and performed poorly at prediciting speed 0.
+Model 10, 9, 2, and 1 were our best models. Models 10 and 2 dropped the 3 features shown in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. Our Models predicted speed 1 and 2 well, did okay at speed 3 and 4 but not great, and performed poorly at predicting speed 0.
 
 <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/actual_vs_predicted_accuracy.png' width=60% height=60%>
 
 ### Features
 Top Three Features from best model: 
-Word_count (descripton column transformation), Age, and PhotoAmt (transformed into the bins we created). Even though Age and PhotoAmt switched places these three features remained key in each model iteration regardless of split or csv pulled in. 
+Word_count (description column transformation), Age, and PhotoAmt (transformed into the bins we created). Even though Age and PhotoAmt switched places these three features remained key in each model iteration regardless of split or csv pulled in. 
 
 Bottom three & least important features:
 Type, Health and VideoAmt. We can safely say these are the least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely, and their scores improved compared to the models that used all features. 
@@ -156,9 +156,9 @@ If these changes where to made to make some things more consistent perhaps the n
 
 ### Limitations & Recommendations to improve
 Time 
- - Given our 4 week project deadline, what we could perform and analyze was limited. If we had more time we could have:
+ - Given our 4-week project deadline, what we could perform and analyze was limited. If we had more time we could have:
    - Tried other types of models and compared them. 
-   - Adjusting bins/catergories we made perhaps some of them weren't as accurate as they could have been. Better categorization could have increase accuracy.
+   - Adjusting bins/categories we made perhaps some of them weren't as accurate as they could have been. Better categorization could have increase accuracy.
    - After removing stop words in the optimization run through, we could have attempted the binning process to see if that made a difference, as logic suggests removing the stop words should have improved the model, but it didn't.
    - Better yet we could have performed a full Natural Language Processing breakdown on the description column instead of only looking at the word length in each description. By being able to look at the sentiment of a description and rank those descriptions, it may have increased the accuracy of the model.
  
