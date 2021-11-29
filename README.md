@@ -55,38 +55,40 @@ We ran 10 different RandomForestClassifer model iterations.
 - Model 1  <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model1_fi.png" width=40% height=40% align=right>
   - Features used: all
   - Classification Report:
-  ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model1_cr.png)
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model1_cr.png' width=40% height=40% align=center>
+  
   - Accuracy Score: 41.35
   - Feature importance: to the right
 - Model 2
   - Features used: all but type, videoamt, health
   - Classification Report:
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model2_cr.png' width=40% height=40% align=center>
   
-  ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model2_cr.png)
   - Accuracy Score: 41.59
 - Model 3
   - Features used: only these: word_count, photoamt, age, color2, bread1, color1, breed2
   - Classification Report:
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model3_cr.png' width=40% height=40% align=center>
   
-  ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model3_cr.png)
   - Accuracy Score: 36.28
 - Model 4
   - Features used: all but type, videoamt, health, vaccinanted, sterilized
   - Classification Report:
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model4_cr.png' width=40% height=40% align=center>
   
-  ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model4_cr.png)
   - Accuracy Score: 41.19
 - Model 5 <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model5_fi.png" width=40% height=40% align=right>
   - Features used: all with transformed word_count into wordbins but type, health, videoamt
   - Classification Report:
-  ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model5_cr.png)
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model5_cr.png' width=40% height=40% align=center>
+  
   - Accuracy Score: 41.14
   - Feature importance: to the right
 - Model 6 (a check to ensure word_count wasn't pulling the model accuracy down even though 'top feature')
   - Features used: all but type, videoamt, health, word_count/wordbins
   - Classification Report:
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model6_cr.png' width=40% height=40% align=center>
   
-  ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model6_cr.png)
   - Accuracy Score: 39.86
   
 75/25 split, cleaned_train_optimized.csv used (see if removed stop words helps improve model)
@@ -94,14 +96,15 @@ We ran 10 different RandomForestClassifer model iterations.
 - Model 7 <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model7_fi.png" width=40% height=40% align=right>
   - Features used: all with optimzed_word_count (stop words removed) 
   - Classification Report:
-  ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model7_cr.png)
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model7_cr.png' width=40% height=40% align=center>
+  
   - Accuracy Score: 40.44
   - Feature importance: to the right 
 - Model 8
   - Features used: all with optimzed_word_count (stop words removed) but type, videoamt, health
   - Classification Report:
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model8_cr.png' width=40% height=40% align=center>
   
-  ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model8_cr.png)
   - Accuracy Score: 40.79
 
 80/20 split, cleaned_train.csv used (back to first csv because 1 and 2 best models so far)
@@ -109,31 +112,38 @@ We ran 10 different RandomForestClassifer model iterations.
 - Model 9 <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model9_fi.png" width=40% height=40% align=right>
   - Features used: all
   - Classification Report:
-  ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model9_cr.png)
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model9_cr.png' width=40% height=40% align=center>
+  
   - Accuracy Score: 42.24
   - Feature importance: to the right
 - Model 10, target accuracy hit
   - Features used: all but type, videoamt, health
   - Classification Report:
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model10_cr.png' width=40% height=40% align=center>
   
-  ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model10_cr.png)
   - Accuracy Score: 42.54
 
 ## Summary & Findings
-Model 10, 9, 2, and 1 were our best models. Models 10 and 2 dropped the 3 features shown in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. (image of graph we made of model 9 and 10?)
+Model 10, 9, 2, and 1 were our best models. Models 10 and 2 dropped the 3 features shown in the feature_importances_ function as the least important. Models 9 and 1 used all features. Models 1 and 2 were done on a 75/25 split, and model 2 was the more accurate of the two. Models 9 and 10 were done on a 80/20 split, were the top two performing models we created, and model 10 was the best/most accurate model we created. Our Models predicted speed 1 and 2 well, did okay at speed 3 and 4 but not great, and performed poorly at prediciting speed 0.
 
-Top Three Features from best model:
+<img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/actual_vs_predicted_accuracy.png' width=60% height=60%>
+
+### Features
+Top Three Features from best model: 
 Word_count (descripton column transformation), Age, and PhotoAmt (transformed into the bins we created). Even though Age and PhotoAmt switched places these three features remained key in each model iteration regardless of split or csv pulled in. 
 
 Bottom three & least important features:
-Type, Health and VideoAmt. We can safely say these are the least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely, and their scores improved compared to the models that used all features. (image of final feature importance graph)
+Type, Health and VideoAmt. We can safely say these are the least important features as our best performing from models in the 75/25 split and 80/20 split dropped these features entirely, and their scores improved compared to the models that used all features. 
 
-Based on our assumptions: what we got right, wrong, and what we missed:
-- Wrong : Type and Health, they were actually 2 of the least important features. Also, single color wasn't as important as we suspected it might be. Type was actually really surprising to all of us, we really thought dog versus cat might matter more.
+<img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/feature_importance.png' width=80% height=80%>
+
+Based on our assumptions what we got right, wrong, and what we missed in Feature Importance:
+- Wrong : Type and Health, they were actually two of the least important features. Also, single color wasn't as important as we suspected it might be. Type was actually really surprising to all of us, we really thought dog versus cat might matter more.
 - Right : word_count (thus description) although more important than we originally expected, age and photo amt. All of these turned out to be the top features regardless of model iteration.
 - Missed : Color2 more important than we would have guessed (in top 5 features), which kind of make sense and most animals probably are dual-colored. Fee was also lower than we would have thought though we didn't expect it to be a top feature. 
 - Unsurprised by: Most of the bottom half features.
 
+## Recommendations Based on Findings
 Elephant in the room, while our final model performed well at 42.5% which in the original competition would have gotten us in the bronze and even the best entry had an accuracy of only 44.99%, these models probably are not that helpful to PetFinder for actually predicting adoption speed. However, we can make some suggestions based on our findings, that may produce better data for the next attempt.
 
 - Have a description, not too long less than 200 words but also more than 40 seems to be key at the faster adoption speeds.
