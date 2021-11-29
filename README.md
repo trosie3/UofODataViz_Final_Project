@@ -49,7 +49,7 @@ Data cleaning code files [link to code](https://github.com/trosie3/UofODataViz_F
   <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/asvswdwithbwp.png' width=50% height=50%>
 
 ## Model Results
-We ran 10 different RandomForestClassifier model iterations.
+We ran 10 different RandomForestClassifier model iterations. [Link to code](https://github.com/trosie3/UofODataViz_Final_Project/tree/main/Model 'line to ml')
 
 75/25 split, cleaned_train.csv used
 
