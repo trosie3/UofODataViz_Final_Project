@@ -120,7 +120,7 @@ We ran 10 different RandomForestClassifier model iterations. [Link to code](http
   - Feature importance: to the right
 - Model 10 target accuracy hit / **Final Model**
   - Features used: all but type, videoamt, health
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/finalmodelcrcm.png' width=50% height=50% align=left>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/finalmodelcrcm.png' width=50% height=50% align=right>
   
   - Confusion Matrix and Classification Report: 
       - Actual 0 count 73 vs Predicted 0 count 6 : way under on total number, did poorly at getting any of speed 0 right
