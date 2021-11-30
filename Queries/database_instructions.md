@@ -13,8 +13,9 @@
  - postgres / postgres
  - password (see config) shared config sperately via slack channel as gitignore will keep it from uploading to github
 - first person to connect to live database: use schema to set up tables, upload color/breed labels csvs, run colab notebooks (both data cleaning and ML model) to pull in the rest of the tables
+- **Guest View database link** guestview:guest1234@dataviz.c6b1qjayiqhf.us-west-2.rds.amazonaws.com:5432/postgres 
 
-## To create a local a local data instead of linking to cloud database
+## To create a local database instead of linking to cloud database
 - pgAdmin4
 - create new database
 - open query tool
