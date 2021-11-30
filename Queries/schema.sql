@@ -124,3 +124,9 @@ FROM cleaned_train AS ct
 LEFT JOIN breed_labels AS bl ON
 ct.breed1=bl.breedid AND
 ct.breed2=bl.breedid;
+
+-- create guestview, so others can see cloud database without changing it
+CREATE USER guestview WITH PASSWORD 'guest1234';
+GRANT CONNECT ON DATABASE postgres TO guestview;
+GRANT USAGE ON SCHEMA public TO guestview;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO guestview;
