@@ -21,7 +21,7 @@ The question our model attempts to find is the adoption speed of each pet. The s
 - Raw data from train.csv: 14993 rows, 24 columns
 
 ### Data used & definitions
-[Data Definitions](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/data_definitions.md 'link to data definitions')
+[Data Definitions](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Data/data_definitions.md 'link to data definitions')
 
 Data cleaning and pre-processing for model [link to code](https://github.com/trosie3/UofODataViz_Final_Project/tree/main/Cleaning:Preprocessing "link to code folder")
 - Cleaned data from clean_trained: 14981 rows, 20 columns (dropped 12 rows with missing data, and ID columns)
