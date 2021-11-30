@@ -54,73 +54,73 @@ We ran 10 different RandomForestClassifier model iterations. [Link to code](http
 
 75/25 split, cleaned_train.csv used
 
-- Model 1  <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model1_fi.png" width=40% height=40% align=right>
+- Model 1  <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model1_fi.png" width=40% height=40% align=right>
   - Features used: all
   - Classification Report:
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model1_cr.png' width=40% height=40% align=center>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model1_cr.png' width=40% height=40% align=center>
   
   - Accuracy Score: 41.35
   - Feature importance: to the right
 - Model 2
   - Features used: all but type, videoamt, health
   - Classification Report:
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model2_cr.png' width=40% height=40% align=center>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model2_cr.png' width=40% height=40% align=center>
   
   - Accuracy Score: 41.59
 - Model 3
   - Features used: only these: word_count, photoamt, age, color2, bread1, color1, breed2
   - Classification Report:
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model3_cr.png' width=40% height=40% align=center>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model3_cr.png' width=40% height=40% align=center>
   
   - Accuracy Score: 36.28
 - Model 4
   - Features used: all but type, videoamt, health, vaccinanted, sterilized
   - Classification Report:
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model4_cr.png' width=40% height=40% align=center>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model4_cr.png' width=40% height=40% align=center>
   
   - Accuracy Score: 41.19
-- Model 5 <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model5_fi.png" width=40% height=40% align=right>
+- Model 5 <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model5_fi.png" width=40% height=40% align=right>
   - Features used: all with transformed word_count into wordbins but type, health, videoamt
   - Classification Report:
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model5_cr.png' width=40% height=40% align=center>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model5_cr.png' width=40% height=40% align=center>
   
   - Accuracy Score: 41.14
   - Feature importance: to the right
 - Model 6 (a check to ensure word_count wasn't pulling the model accuracy down even though it was a 'top feature')
   - Features used: all but type, videoamt, health, word_count/wordbins
   - Classification Report:
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model6_cr.png' width=40% height=40% align=center>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model6_cr.png' width=40% height=40% align=center>
   
   - Accuracy Score: 39.86
   
 75/25 split, cleaned_train_optimized.csv used (To see if removing stop words helps to improve the model)
 
-- Model 7 <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model7_fi.png" width=40% height=40% align=right>
+- Model 7 <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model7_fi.png" width=40% height=40% align=right>
   - Features used: all with optimzed_word_count (stop words removed) 
   - Classification Report:
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model7_cr.png' width=40% height=40% align=center>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model7_cr.png' width=40% height=40% align=center>
   
   - Accuracy Score: 40.44
   - Feature importance: to the right 
 - Model 8
   - Features used: all with optimzed_word_count (stop words removed) but type, videoamt, health
   - Classification Report:
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model8_cr.png' width=40% height=40% align=center>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model8_cr.png' width=40% height=40% align=center>
   
   - Accuracy Score: 40.79
 
 80/20 split, cleaned_train.csv used (back to first csv because 1 and 2 best models so far)
 
-- Model 9 <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model9_fi.png" width=40% height=40% align=right>
+- Model 9 <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model9_fi.png" width=40% height=40% align=right>
   - Features used: all
   - Classification Report:
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model9_cr.png' width=40% height=40% align=center>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/model9_cr.png' width=40% height=40% align=center>
   
   - Accuracy Score: 42.24
   - Feature importance: to the right
 - Model 10 target accuracy hit / **Final Model**
   - Features used: all but type, videoamt, health
-  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/finalmodelcrcm.png' width=50% height=50% align=right>
+  <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/model%20images/finalmodelcrcm.png' width=50% height=50% align=right>
   
   - Confusion Matrix and Classification Report: 
       - Actual 0 count 73 vs Predicted 0 count 6 : way under on total number, did poorly at getting any of speed 0 right
