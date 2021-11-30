@@ -8,8 +8,8 @@
 Our group chose pet adoption as our topic, because we are animal lovers. The purpose of this project is to create machine learning model that predicts the adoption speed, and see what features affect the model. We are working with data from a previously completed Kaggle challenge and with a limited 4-week timeline, due to that we set our target accuracy at 42.3+% as that would have achieved ‘bronze’ if we had been participating in the original Kaggle competition. The top 10 (non-cheating) finalists were all at 44.1% or higher, with the best model at 44.99%.
 
 ### Source Data
-Our dataset lists instances of pets that were, or are up for adoption in 2018.
-We obtained dataset from Kaggle's 2018 PetFinder competition. [Link to Kaggle Data](https://www.kaggle.com/c/petfinder-adoption-prediction/data 'link to kaggle')
+Our dataset lists instances of pets that were up for adoption in 2018.
+We obtained the dataset from Kaggle's 2018 PetFinder competition. [Link to Kaggle Data](https://www.kaggle.com/c/petfinder-adoption-prediction/data 'link to kaggle')
 
 ### Technology used & explanation of those choices
 [Technology Breakdown](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/technology.md 'link to technology breakdowns')
@@ -28,8 +28,9 @@ Data cleaning and pre-processing for model [link to code](https://github.com/tro
 - Largest amount of data points in speed 2 and 4, followed but 3 and 1, with speed 0 having far fewer than the rest.
 ![image](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/adoption_speed.png)
 
+
 ### Assumptions made on which features would have an impact on our model
-- A common saying is 'dogs are man’s best friend' so we suspect that type of pet (dog or cat) to have an impact. 
+- A common saying is 'dogs are man’s best friend,' so we suspect the type of pet (dog or cat) to have an impact. 
   - At speed 0 and 1, cats appear to be adopted slightly faster. Speed 4 (which is still in shelter) more dogs than cats appear to still be unadopted.
   <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Visuals/graphs/adoption_speed_by_type.png' width=70% height=70%>
 - Health of the pet might have a significant impact, most people would probably adopt a healthy pet over injured.
@@ -85,14 +86,14 @@ We ran 10 different RandomForestClassifier model iterations. [Link to code](http
   
   - Accuracy Score: 41.14
   - Feature importance: to the right
-- Model 6 (a check to ensure word_count wasn't pulling the model accuracy down even though 'top feature')
+- Model 6 (a check to ensure word_count wasn't pulling the model accuracy down even though it was a 'top feature')
   - Features used: all but type, videoamt, health, word_count/wordbins
   - Classification Report:
   <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model6_cr.png' width=40% height=40% align=center>
   
   - Accuracy Score: 39.86
   
-75/25 split, cleaned_train_optimized.csv used (see if removed stop words helps improve model)
+75/25 split, cleaned_train_optimized.csv used (To see if removing stop words helps to improve the model)
 
 - Model 7 <img src="https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/model7_fi.png" width=40% height=40% align=right>
   - Features used: all with optimzed_word_count (stop words removed) 
@@ -121,8 +122,8 @@ We ran 10 different RandomForestClassifier model iterations. [Link to code](http
   - Features used: all but type, videoamt, health
   - Confusion Matrix and Classification Report:
      - Actual 0 count 73 vs Predicted 0 count 6 : way under on total number, did poorly at getting any of speed 0 right
-     - Actual 1 count 631 vs Predicted 1 count 589 : slightly under on total number, did fairly well at getting of speed 1 right
-     - Actual 2 count 806 vs Predicted 2 count 830 : slightly over on total number, did fairly well at getting of speed 2 right
+     - Actual 1 count 631 vs Predicted 1 count 589 : slightly under on total number, we did fairly well at getting speed 1 right
+     - Actual 2 count 806 vs Predicted 2 count 830 : slightly over on total number, did fairly well at getting speed 2 right
      - Actual 3 count 633 vs Predicted 3 count 511 : under on total number, did okay at getting of speed 3 right
      - Actual 4 count 854 vs Predicted 4 count 1061 : over on total number, did well at getting most of speed 4 right
   <img src='https://github.com/trosie3/UofODataViz_Final_Project/blob/main/model%20images/finalmodelcrcm.png' width=60% height=60% align=center>
@@ -173,4 +174,4 @@ Data
   - Adoption speed already pre-categorized. Given that adoption speed is based on a time-line, had this not previously be categorized we could have performed a LinearRegression Model which could have given us more insight as to where/what the model was struggling to predict, and perhaps could have been more accurate model.
   - With photoamt being a key feature, perhaps if the images were provided an analysis of the images could be performed to key into what images help make the pets more adoptable, which could lead to suggestions on what those 1-5 photos should be rather than just the number suggested.
 
-With more time and better data, perhaps we could have made a better model, and/or come up with more ways PetFinder could improve individual listings. Plus, improved listing could lead to fewer pets still in the shelter after 100 days, which had the largest count of data points in this dataset.
+With more time and/or better data, perhaps we could have made a better model, and/or come up with more ways PetFinder could improve individual listings. Plus, improved listing could lead to fewer pets still in the shelter after 100 days, which had the largest count of data points in this dataset.
