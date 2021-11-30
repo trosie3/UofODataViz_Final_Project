@@ -5,7 +5,7 @@ We used the NLTK (Natural Language Toolkit) library to remove stop words from th
 
 ## Database Storage
 Postgres(cloud) is the database we used. 
-For connecting to the database - SQlAlchemy was used to integrate the Google Colab notebooks and the database to both pull in data for the model, and export data to the database as needed.
+For connecting to the database - SQlAlchemy was used to integrate the Google Colab notebooks and the database to both pull in data for the model, and export data to the database as needed. [Instructions for connecting to database.](https://github.com/trosie3/UofODataViz_Final_Project/blob/main/Queries/database_instructions.md 'link to db instruc')
 
 ## Machine Learning Model
 We used the sklearn library to pull in what we needed to run the model within Google Colab.
