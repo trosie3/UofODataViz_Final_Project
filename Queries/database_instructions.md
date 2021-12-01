@@ -3,7 +3,8 @@
 * username : guestview
 * password : guest1234
 * database : postgres
-* endpoint : dataviz.c6b1qjayiqhf.us-west-2.rds.amazonaws.com:5432
+* host address : dataviz.c6b1qjayiqhf.us-west-2.rds.amazonaws.com
+* port :5432
 * URI : postgresql+psycopg2://guestview:guest1234@dataviz.c6b1qjayiqhf.us-west-2.rds.amazonaws.com:5432/postgres 
 
 #### Connecting to Python in Colab
